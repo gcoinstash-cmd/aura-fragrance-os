@@ -89,7 +89,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
             <h2 className="text-xl sm:text-2xl font-black tracking-tight text-white mb-2 font-mono">
               PERFUMER'S ATELIER // OPERATOR ACCESS
             </h2>
-            <p className="text-xs text-slate-400 max-w-md mb-8">
+            <p className="text-base text-zinc-200 leading-relaxed max-w-md mb-8">
               Frictionless demo gate active. Use the 1-click bypass button below or enter preset passkey <code className="text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded font-mono">fragrance2026</code>.
             </p>
 
@@ -113,7 +113,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
 
               <button
                 type="submit"
-                className="w-full bg-amber-400 hover:bg-amber-300 text-black font-black uppercase tracking-wider py-3 rounded-xl text-xs transition-all duration-200 font-mono shadow-[0_0_20px_rgba(245,158,11,0.3)] active:scale-95 cursor-pointer"
+                className="w-full bg-amber-400 hover:bg-amber-300 text-black font-black uppercase tracking-wider py-3 rounded-xl text-base font-semibold min-h-[44px] transition-all duration-200 font-mono shadow-[0_0_20px_rgba(245,158,11,0.3)] active:scale-95 cursor-pointer"
               >
                 Authenticate Perfumer
               </button>
@@ -122,7 +122,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
               <button
                 type="button"
                 onClick={handleAutoFill}
-                className="w-full bg-white/5 hover:bg-white/10 text-amber-400 border border-amber-500/30 hover:border-amber-500/60 font-mono text-xs uppercase tracking-wider py-2.5 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full bg-white/5 hover:bg-white/10 text-amber-400 border border-amber-500/30 hover:border-amber-500/60 font-mono text-base font-semibold min-h-[44px] uppercase tracking-wider py-2.5 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Sparkles size={14} />
                 <span>1-Click Auto-Fill Demo Passkey (`fragrance2026`)</span>
@@ -158,7 +158,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
                 </button>
               </div>
 
-              <div className="flex items-center gap-2 text-emerald-400 text-[11px] shrink-0">
+              <div className="flex items-center gap-2 text-emerald-400 text-xs font-semibold shrink-0">
                 <ShieldCheck size={14} />
                 <span>ATELIER_AUTH: OK</span>
               </div>
@@ -184,7 +184,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
                             <span className="text-xs font-mono text-amber-400 font-bold block">{b.batchCode} • {b.concentration}</span>
                             <h3 className="text-sm font-bold text-white mt-0.5">{b.name}</h3>
                           </div>
-                          <span className={`text-[10px] font-mono px-2 py-0.5 rounded font-bold uppercase ${
+                          <span className={`text-xs font-semibold tracking-wider font-mono px-2 py-0.5 rounded font-bold uppercase ${
                             b.status === 'ready' 
                               ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40' 
                               : b.status === 'maceration' 
@@ -211,7 +211,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
                         </div>
 
                         {/* Status Switcher */}
-                        <div className="pt-2 border-t border-white/5 flex gap-1.5 font-mono text-[10px]">
+                        <div className="pt-2 border-t border-white/5 flex gap-1.5 font-mono text-xs font-semibold tracking-wider">
                           {(['maceration', 'filtration', 'bottling', 'ready'] as const).map((st) => (
                             <button
                               key={st}
@@ -240,19 +240,19 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-300">
                     <div className="bg-white/5 p-3 rounded-lg border border-white/5">
-                      <span className="text-slate-500 block text-[10px]">DATABASE ENGINE</span>
+                      <span className="text-slate-300 block text-xs font-semibold tracking-wider">DATABASE ENGINE</span>
                       <strong className="text-white">PostgreSQL 15 (Supabase Hosted)</strong>
                     </div>
                     <div className="bg-white/5 p-3 rounded-lg border border-white/5">
-                      <span className="text-slate-500 block text-[10px]">SECURITY LAYER</span>
+                      <span className="text-slate-300 block text-xs font-semibold tracking-wider">SECURITY LAYER</span>
                       <strong className="text-emerald-400">Row Level Security (RLS) Active</strong>
                     </div>
                     <div className="bg-white/5 p-3 rounded-lg border border-white/5">
-                      <span className="text-slate-500 block text-[10px]">TABLE: fragrance_formulas</span>
+                      <span className="text-slate-300 block text-xs font-semibold tracking-wider">TABLE: fragrance_formulas</span>
                       <strong className="text-white">4 Master Formulations Seeded</strong>
                     </div>
                     <div className="bg-white/5 p-3 rounded-lg border border-white/5">
-                      <span className="text-slate-500 block text-[10px]">TABLE: custom_perfume_intakes</span>
+                      <span className="text-slate-300 block text-xs font-semibold tracking-wider">TABLE: custom_perfume_intakes</span>
                       <strong className="text-white">Active Atelier Queue</strong>
                     </div>
                   </div>

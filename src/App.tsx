@@ -181,7 +181,7 @@ export default function App() {
         <nav className="flex items-center gap-6" aria-label="Main Navigation">
           <button
             onClick={() => setIsLabMode(false)}
-            className={`font-sans text-[11px] uppercase tracking-[0.16em] transition-colors focus:outline-none ${
+            className={`font-sans text-xs font-semibold uppercase tracking-[0.16em] transition-colors focus:outline-none ${
               !isLabMode ? 'text-stone-900 font-medium border-b border-stone-850 pb-0.5' : 'text-stone-400 hover:text-stone-700'
             }`}
           >
@@ -190,7 +190,7 @@ export default function App() {
           
           <button
             onClick={() => setIsLabMode(true)}
-            className={`flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-[0.16em] transition-colors focus:outline-none ${
+            className={`flex items-center gap-1.5 font-sans text-xs font-semibold uppercase tracking-[0.16em] transition-colors focus:outline-none ${
               isLabMode ? 'text-stone-900 font-medium border-b border-stone-850 pb-0.5' : 'text-stone-400 hover:text-stone-700'
             }`}
           >
@@ -200,7 +200,7 @@ export default function App() {
 
           <button
             onClick={() => setIsAdminOpen(true)}
-            className="flex items-center gap-1.5 px-3 py-1 rounded bg-stone-900 text-amber-400 font-mono text-[10px] uppercase tracking-wider font-bold hover:bg-stone-800 transition-all cursor-pointer shadow-sm"
+            className="flex items-center gap-1.5 px-3 py-1 rounded bg-stone-900 text-amber-400 font-mono text-xs font-semibold tracking-wider uppercase tracking-wider font-bold hover:bg-stone-800 transition-all cursor-pointer shadow-sm"
           >
             <Key size={11} />
             <span>[ ATELIER PASS ]</span>
@@ -241,7 +241,7 @@ export default function App() {
                 <span className="font-mono text-[9px] uppercase tracking-wide text-stone-400 block mb-1">
                   Olfactory Character
                 </span>
-                <span className="text-stone-800 text-xs md:text-sm font-medium">
+                <span className="text-stone-800 text-base font-semibold font-medium">
                   {currentProductCharacter}
                 </span>
               </div>
@@ -330,7 +330,7 @@ export default function App() {
                       <div className="absolute bottom-0 inset-x-0 bg-stone-200/30 border-t border-stone-300 h-[65%] origin-bottom transition-all duration-[1000ms]" />
                       
                       <div className="text-center z-10 px-2">
-                        <span className="font-serif text-[10px] uppercase font-light tracking-[0.2em] text-stone-800 block">
+                        <span className="font-serif text-xs font-semibold tracking-wider uppercase font-light tracking-[0.2em] text-stone-800 block">
                           AURA
                         </span>
                         <span className="font-mono text-[7px] text-stone-400 uppercase tracking-widest block mt-1">
@@ -382,7 +382,7 @@ export default function App() {
             
             <button
               onClick={() => setIsLabMode(true)}
-              className="inline-flex items-center gap-1 bg-stone-900 text-white hover:bg-stone-850 px-4 py-2 text-[10px] uppercase tracking-wider font-mono focus:ring-1 focus:ring-stone-400"
+              className="inline-flex items-center gap-1 bg-stone-900 text-white hover:bg-stone-850 px-4 py-2 text-xs font-semibold tracking-wider uppercase tracking-wider font-mono focus:ring-1 focus:ring-stone-400"
             >
               <Sliders size={12} />
               <span>Experiment In Lab</span>
@@ -605,7 +605,7 @@ export default function App() {
                         setCustomVesselImage(e.target.value);
                         setShowLabSchematic(false);
                       }}
-                      className="w-full bg-stone-50 border border-stone-200 py-1.5 px-2 text-xs focus:outline-none focus:border-stone-500 font-mono text-[11px]"
+                      className="w-full bg-stone-50 border border-stone-200 py-1.5 px-2 text-xs focus:outline-none focus:border-stone-500 font-mono text-xs font-semibold"
                     >
                       <option value="https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=1200">
                         Clear Oak Sandstone (Monolith Study)
@@ -743,7 +743,7 @@ export default function App() {
                   <button
                     type="submit"
                     disabled={!tempNoteName.trim()}
-                    className={`w-full py-2.5 font-mono text-[10px] uppercase tracking-wider flex items-center justify-center gap-1.5 border transition-all ${
+                    className={`w-full py-2.5 font-mono text-xs font-semibold tracking-wider uppercase tracking-wider flex items-center justify-center gap-1.5 border transition-all ${
                       tempNoteName.trim() 
                         ? 'bg-stone-900 border-stone-900 text-white hover:bg-stone-850 cursor-pointer' 
                         : 'bg-stone-150 border-stone-200 text-stone-400 cursor-not-allowed'
@@ -758,10 +758,10 @@ export default function App() {
               {/* Form output / interactive pyramid list to inspect and delete components */}
               <div className="lg:col-span-7 bg-white p-6 border border-stone-200 space-y-6">
                 <header className="border-b border-stone-100 pb-3">
-                  <h5 className="font-mono text-[11px] uppercase tracking-wider text-stone-800 font-bold block">
+                  <h5 className="font-mono text-xs font-semibold uppercase tracking-wider text-stone-800 font-bold block">
                     Active Formulation Ingredients
                   </h5>
-                  <span className="text-[10px] text-stone-400 block mt-0.5">
+                  <span className="text-xs font-semibold tracking-wider text-stone-400 block mt-0.5">
                     Delete or inspect active components prior to rendering.
                   </span>
                 </header>
@@ -776,7 +776,7 @@ export default function App() {
                       <span className="font-mono text-[8px] text-stone-400">Notes de Tête</span>
                     </div>
                     {customTopNotes.length === 0 ? (
-                      <p className="text-[11px] text-stone-400 italic p-3 text-center border border-dashed border-stone-100">
+                      <p className="text-xs font-semibold text-stone-400 italic p-3 text-center border border-dashed border-stone-100">
                         No top notes added. Scent profile will miss high-volatility impressions.
                       </p>
                     ) : (
@@ -810,7 +810,7 @@ export default function App() {
                       <span className="font-mono text-[8px] text-stone-400">Notes de Cœur</span>
                     </div>
                     {customHeartNotes.length === 0 ? (
-                      <p className="text-[11px] text-stone-400 italic p-3 text-center border border-dashed border-stone-100">
+                      <p className="text-xs font-semibold text-stone-400 italic p-3 text-center border border-dashed border-stone-100">
                         No heart notes added. Formulation lacks definition and body.
                       </p>
                     ) : (
@@ -844,7 +844,7 @@ export default function App() {
                       <span className="font-mono text-[8px] text-stone-400">Notes de Fond</span>
                     </div>
                     {customBaseNotes.length === 0 ? (
-                      <p className="text-[11px] text-stone-400 italic p-3 text-center border border-dashed border-stone-100">
+                      <p className="text-xs font-semibold text-stone-400 italic p-3 text-center border border-dashed border-stone-100">
                         No base notes added. Scent profile will evaporate instantly with zero skin retention.
                       </p>
                     ) : (
@@ -871,7 +871,7 @@ export default function App() {
                 </div>
 
                 <div className="bg-stone-50 p-4 border border-stone-200 flex justify-between items-center mt-6">
-                  <span className="font-mono text-[10px] text-stone-500">
+                  <span className="font-mono text-xs font-semibold tracking-wider text-stone-500">
                     ScentProfile is bound reactively below. Look at the changes in real-time.
                   </span>
                   
@@ -965,12 +965,12 @@ export default function App() {
       <footer className="mt-32 max-w-6xl mx-auto px-6 border-t border-stone-200/55 pt-12 flex flex-col md:flex-row justify-between items-center text-stone-400 gap-6">
         <div>
           <span className="font-serif text-stone-800 tracking-widest text-sm uppercase">AURA</span>
-          <p className="text-[10px] font-mono mt-1 text-stone-450 uppercase tracking-wider">
+          <p className="text-xs font-semibold tracking-wider font-mono mt-1 text-stone-450 uppercase tracking-wider">
             Premium website template for high-end boutique fragrance brands.
           </p>
         </div>
         
-        <div className="flex gap-6 font-mono text-[10px] tracking-wider uppercase text-stone-500">
+        <div className="flex gap-6 font-mono text-xs font-semibold tracking-wider tracking-wider uppercase text-stone-500">
           <a href="#scent" className="hover:text-stone-850 transition-colors">Olfactory Pyramid</a>
           <a href="#lab" className="hover:text-stone-850 transition-colors">Scent Chemistry</a>
           <a href="#studio" className="hover:text-stone-850 transition-colors">Accessibility Statement</a>
